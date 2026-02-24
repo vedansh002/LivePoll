@@ -1,0 +1,235 @@
+/* Teacher Dashboard Component */
+
+.teacher-dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: white;
+  border-radius: calc(var(--border-radius) * 2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--light);
+  padding-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  color: var(--dark);
+}
+
+.room-info {
+  display: flex;
+  gap: 15px;
+}
+
+.room-code-box {
+  background: var(--light);
+  padding: 12px 20px;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.room-code-box strong {
+  color: var(--primary);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  font-family: 'Courier New', monospace;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leaderboard-section {
+    order: 2;
+  }
+}
+
+/* Section Styles */
+.section {
+  background: var(--light);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  border: 2px solid #e5e7eb;
+}
+
+.section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Question Form */
+.question-form {
+  background: white;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-bottom: 25px;
+  border: 2px solid #e5e7eb;
+}
+
+.question-form .form-group {
+  margin-bottom: 15px;
+}
+
+.question-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.option-input {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.option-input input[type='text'] {
+  flex: 1;
+  padding: 8px;
+  font-size: 0.95rem;
+}
+
+.option-input input[type='radio'] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Questions List */
+.questions-list {
+  margin-bottom: 20px;
+}
+
+.question-item {
+  background: white;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid var(--light);
+  transition: all var(--transition);
+}
+
+.question-item:hover {
+  border-left-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question-item.active {
+  border-left-color: var(--success);
+  background-color: #f0fdf4;
+}
+
+.question-item > div:last-child {
+  font-size: 0.85rem;
+}
+
+.question-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Leaderboard */
+.leaderboard {
+  background: white;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  min-height: 300px;
+}
+
+.empty-message {
+  text-align: center;
+  color: #9ca3af;
+  padding: 40px 20px;
+  font-style: italic;
+}
+
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.leaderboard-item {
+  display: grid;
+  grid-template-columns: 40px 1fr 80px;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--light);
+  border-radius: var(--border-radius);
+  font-weight: 500;
+}
+
+.rank {
+  background: var(--primary);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.name {
+  color: var(--dark);
+}
+
+.score {
+  text-align: right;
+  background: var(--success);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* Quiz Controls */
+.quiz-controls {
+  background: white;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  border-top: 2px solid #e5e7eb;
+  margin-top: 20px;
+}
+
+.current-q {
+  text-align: center;
+  margin-bottom: 12px;
+  color: #6b7280;
+  font-size: 0.9rem;
+}

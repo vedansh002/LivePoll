@@ -1,0 +1,39 @@
+/* Student Join Component */
+
+.student-join {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.join-card {
+  background: white;
+  padding: 50px;
+  border-radius: calc(var(--border-radius) * 2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  width: 100%;
+}
+
+.join-card h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--dark);
+}
+
+.join-card .form-group {
+  margin-bottom: 25px;
+}
+
+.join-card input {
+  font-size: 1.1rem;
+  padding: 12px;
+}
+
+.join-card .btn-student {
+  width: 100%;
+  margin-top: 10px;
+}
